@@ -3,21 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homepage</title>
+    <title>Hye-Kyung Bae, Ph.D. | Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            color: #333;
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
         }
-        h1 { color: #2c3e50; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero h2 {
+            font-size: 1.35rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 750px;
+            margin-bottom: 2rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--border);
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        /* Badges */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Grid Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Timeline Items */
+        .timeline-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.1rem;
+        }
+
+        .timeline-item .sub {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .timeline-item .date {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Homepage!</h1>
-    <p>Hi, I'm [Your Name]. This site is currently under construction.</p>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Hye-Kyung Bae, Ph.D.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero">
+            <h1>Hye-Kyung Bae, Ph.D.</h1>
+            <h2>Human-Centered Computing Researcher & Educator</h2>
+            <p>I specialize in Human-Computer Interaction, Virtual Reality immersion experiences, Information Visualization, and Instructional Technology.</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#" class="btn btn-secondary">Download CV (PDF)</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>I earned my Ph.D. in Human-Centered Computing from the University of Maryland, Baltimore County (UMBC). My doctoral dissertation focused on understanding immersion experiences when utilizing Virtual Reality for foreign language learning. I combine deep technical research expertise with instructional system design and marketing analytics.</p>
+            
+            <div class="skills-grid">
+                <span class="badge">Virtual Reality (VR/AR)</span>
+                <span class="badge">Information Visualization</span>
+                <span class="badge">Human-Computer Interaction (HCI)</span>
+                <span class="badge">Looker Studio / Analytics</span>
+                <span class="badge">Instructional Systems Design</span>
+                <span class="badge">UX Research & Usability Evaluation</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Featured Portfolio Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>VR Immersion & Usability Evaluation</h3>
+                    <p>Designed and analyzed student immersion experiences in VR for language learning. Developed educational models for VR usability evaluation and led multi-lab demo sessions (User Studies Lab & Green-Screen Studio).</p>
+                    <div class="skills-grid">
+                        <span class="badge">360° Video</span>
+                        <span class="badge">HCI Research</span>
+                        <span class="badge">IMX/UXPA Posters</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Information Visualization & Analytics</h3>
+                    <p>Created real-life class activities utilizing Google Looker Studio to analyze and visualize YouTube channel analytics, email campaigns, and marketing yield pipeline trends.</p>
+                    <div class="skills-grid">
+                        <span class="badge">Looker Studio</span>
+                        <span class="badge">HCC 706</span>
+                        <span class="badge">Data Vis</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>EdTech & Prototyping</h3>
+                    <p>Explored innovative educational technologies including Korean language learning modules integrated with 3D printing and e-learning platform prototypes for specialized education.</p>
+                    <div class="skills-grid">
+                        <span class="badge">EdTech</span>
+                        <span class="badge">Paper Prototype</span>
+                        <span class="badge">Instructional Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Teaching & Experience Highlights</h2>
+            
+            <div class="timeline-item">
+                <h3>Guest Lecturer & Mentor</h3>
+                <div class="sub">University of Maryland, Baltimore County (UMBC)</div>
+                <div class="date">2018 - 2025</div>
+                <p>Designed hands-on class activities and lectures for graduate-level courses including Interface for Information Visualization (HCC 706), UX of Virtual & Augmented Realities (IS/HCC 698), Advanced Field Research Methods (IS 805), and Human-Centered Design (HCC 729).</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Graduate Assistant & Instructional Specialist</h3>
+                <div class="sub">Division of Professional Studies & ELI | UMBC</div>
+                <div class="date">2005 - 2026</div>
+                <p>Managed website updates, email campaigns, and social media trend analytics reports. Hosted international administrator training programs and managed digital signage systems.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Overseas Marketing & Management</h3>
+                <div class="sub">HC Telecom, Hana Bank, LG International Corp.</div>
+                <div class="date">1987 - 2004</div>
+                <p>Managed overseas export/import trade processes, technical translation for engineering teams, financial reporting, and joint consulting projects with McKinsey & Company.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline-item">
+                <h3>Ph.D. in Human-Centered Computing</h3>
+                <div class="sub">University of Maryland, Baltimore County (UMBC) | 2026</div>
+                <p>Dissertation: <em>Understanding Immersion Experience When Using Virtual Reality For Foreign Language Learning</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>M.S. in Human-Centered Computing</h3>
+                <div class="sub">UMBC | 2014</div>
+            </div>
+            <div class="timeline-item">
+                <h3>M.A. in ISD / ESOL (K-12 Certification)</h3>
+                <div class="sub">UMBC | 2011</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I am open to new academic, research, and user experience opportunities.</p>
+            <br>
+            <p>📧 Email: <a href="mailto:hkbae55@gmail.com">hkbae55@gmail.com</a></p>
+            <p>📍 Location: Hanover, MD</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hye-Kyung Bae. Built with GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
