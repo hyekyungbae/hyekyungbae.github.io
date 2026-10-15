@@ -1,379 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hye-Kyung Bae, Ph.D. | Portfolio</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --text-dark: #1f2937;
-            --text-light: #64748b; /* Clean professional gray */
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-            --border: #e2e8f0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-        }
-
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--text-dark);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 4rem 0 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.75rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        /* Subtitle set to Gray */
-        .hero h2 {
-            font-size: 1.35rem;
-            color: #64748b;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-light);
-            max-width: 750px;
-            margin-bottom: 2rem;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--border);
-            background-color: var(--white);
-            color: var(--text-dark);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--border);
-        }
-
-        /* Sections */
-        section {
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-
-        /* Badges */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .badge {
-            background: #e0e7ff;
-            color: #3730a3;
-            padding: 0.35rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        /* Grid Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Timeline Items */
-        .timeline-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .timeline-item h3 {
-            font-size: 1.1rem;
-        }
-
-        .timeline-item .sub {
-            color: var(--primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .timeline-item .date {
-            color: var(--text-light);
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hye-Kyung Bae, Ph.D. — HCI researcher and educator exploring immersive experiences, learning, and information visualization.">
+<title>Hye-Kyung Bae, Ph.D. | HCI Researcher and Educator</title>
+<style>
+:root{--ink:#202b3b;--muted:#526177;--blue:#245bc0;--line:#dde4ed;--paper:#fff;--wash:#f7f9fc}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:120px}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--blue);text-underline-offset:4px}a:hover{text-decoration:underline}a:focus-visible,summary:focus-visible{outline:3px solid #b56b00;outline-offset:5px}p{margin:0 0 1rem}h1,h2,h3{line-height:1.25;margin:0 0 1rem}h1{font-size:clamp(2.1rem,5vw,3.5rem);letter-spacing:-.04em}h2{font-size:clamp(1.65rem,3vw,2.1rem);letter-spacing:-.025em}h3{font-size:1.2rem}main,.nav-inner,footer{max-width:1160px;margin:auto;padding-inline:28px}.skip{position:absolute;left:16px;top:-100px;background:white;padding:12px;z-index:20}.skip:focus{top:12px}nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}.nav-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:18px}.brand{font-weight:700;color:var(--ink);text-decoration:none}.nav-links{display:flex;flex-wrap:wrap;gap:12px 24px;margin:0;padding:0;list-style:none}.nav-links a{font-size:.9rem;color:var(--muted);text-decoration:none}.nav-links a:hover{color:var(--blue);text-decoration:underline}.hero{padding:84px 0 64px;max-width:920px}.subtitle{font-size:1.45rem;font-weight:500;color:var(--muted);margin-bottom:24px}.intro{font-size:1.15rem;max-width:850px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.button{display:inline-block;padding:10px 19px;border:1px solid #b9c9e1;border-radius:6px;background:white;color:var(--blue);font-weight:600;text-decoration:none;font-size:.94rem}.button:hover{background:#edf3ff;text-decoration:none}.primary{background:var(--blue);border-color:var(--blue);color:white}.primary:hover{background:#19478e}section{padding:52px 0;border-top:1px solid var(--line)}.about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px}.about-grid p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;scroll-margin-top:120px}.project-image{width:100%;height:190px;object-fit:contain;background:#f1f4f8;border:1px solid var(--line);border-radius:5px;margin-bottom:22px}.card p{color:var(--muted);font-size:.95rem}.tags{list-style:none;display:flex;gap:7px;flex-wrap:wrap;padding:0;margin:4px 0 24px}.tags li{background:#edf1fc;color:#344d85;padding:5px 10px;border-radius:20px;font-size:.76rem}.card details{margin-top:auto}.card summary{cursor:pointer;list-style:none;width:fit-content}.card summary::-webkit-details-marker{display:none}.card summary:after{content:' +';margin-left:5px}.card details[open] summary:after{content:' −'}.card details p{margin-top:16px;font-size:.87rem}.experience-list{display:grid;gap:0}.job{display:grid;grid-template-columns: .9fr 1.3fr;gap:38px;padding:28px 0;border-bottom:1px solid var(--line)}.job:first-child{padding-top:10px}.job:last-child{border-bottom:0;padding-bottom:0}.job h3{font-size:1.08rem;margin-bottom:10px}.meta{color:var(--muted);font-size:.88rem}.job-copy{color:var(--muted);font-size:.96rem}.job-copy p:last-child{margin:0}.contact-links{display:flex;gap:14px 25px;flex-wrap:wrap;margin-top:22px}.contact-links a{font-weight:600}footer{padding-block:28px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+@media(max-width:900px){.nav-inner{align-items:flex-start;flex-direction:column;gap:10px}.cards{gap:14px}.card{padding:16px}.project-image{height:150px}.about-grid{gap:28px}.hero{padding-top:56px}}
+@media(max-width:700px){main,.nav-inner,footer{padding-inline:20px}.hero{padding-block:44px}.subtitle{font-size:1.2rem}.intro{font-size:1.03rem}.about-grid,.cards,.job{grid-template-columns:1fr}.about-grid{gap:22px}.cards{gap:22px}.project-image{height:220px}.card{padding:22px}.job{gap:14px}.nav-links{gap:8px 17px}.nav-links a{font-size:.83rem}section{padding:38px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-<body>
-
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Hye-Kyung Bae, Ph.D.</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        <header class="hero">
-            <h1>Hye-Kyung Bae</h1>
-            <h2>Human-Centered Computing Researcher & Educator</h2>
-            <p>I specialize in Human-Computer Interaction, Virtual Reality immersion experiences, Information Visualization, and Instructional Technology.</p>
-            <div class="btn-group">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="CV_Hye-Kyung%20Bae.pdf" target="_blank" class="btn btn-secondary">Download CV (PDF)</a>
-            </div>
-        </header>
-
-        <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <p>I earned my Ph.D. in Human-Centered Computing from the University of Maryland, Baltimore County (UMBC). My doctoral dissertation focused on understanding immersion experiences when utilizing Virtual Reality for foreign language learning. I combine deep technical research expertise with instructional system design and marketing analytics.</p>
-            
-            <div class="skills-grid">
-                <span class="badge">Virtual Reality (VR/AR)</span>
-                <span class="badge">Information Visualization</span>
-                <span class="badge">Human-Computer Interaction (HCI)</span>
-                <span class="badge">Looker Studio / Analytics</span>
-                <span class="badge">Instructional Systems Design</span>
-                <span class="badge">UX Research & Usability Evaluation</span>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Featured Portfolio Projects</h2>
-            <div class="grid">
-                
-                <div class="card">
-                    <img src="IMX_DC_Poster.png" alt="IMX 2021 Poster" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem; border: 1px solid var(--border);">
-                    <h3>VR Immersion & Foreign Language Learning</h3>
-                    <p>Doctoral research investigating immersion, presence, and language acquisition across artificial 3D simulations and 360° video environments for Korean language learning.</p>
-                    <div class="skills-grid" style="margin-bottom: 1.25rem;">
-                        <span class="badge">Virtual Reality (VR)</span>
-                        <span class="badge">360° Video</span>
-                        <span class="badge">HCI Research</span>
-                    </div>
-                    <div>
-                        <a href="IMX_DC_Poster.png" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View IMX Poster</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="UXPA%20Poster.png" alt="UXPA 2021 Poster" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem; border: 1px solid var(--border);">
-                    <h3>VR Usability Evaluation Methods</h3>
-                    <p>Designed a three-sequence curriculum and observation protocol to train UX professionals in VR usability evaluation across Usability Studies Labs and Green-Screen Studio environments.</p>
-                    <div class="skills-grid" style="margin-bottom: 1.25rem;">
-                        <span class="badge">UX Research</span>
-                        <span class="badge">Curriculum Design</span>
-                        <span class="badge">Usability Testing</span>
-                    </div>
-                    <div>
-                        <a href="UXPA%20Poster.pdf" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View UXPA Poster (PDF)</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Information Visualization & Analytics</h3>
-                    <p>Developed hands-on curriculum modules and dashboards using Google Looker Studio to visualize YouTube channel analytics, email campaigns, and marketing conversion funnels.</p>
-                    <div class="skills-grid" style="margin-bottom: 1.25rem;">
-                        <span class="badge">Looker Studio</span>
-                        <span class="badge">HCC 706</span>
-                        <span class="badge">Marketing Analytics</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">Teaching & Professional Experience</h2>
-            
-            <div class="timeline-item">
-                <h3>Undergraduate Course Instructor (Part-Time)</h3>
-                <div class="sub">University of Maryland, Baltimore County (UMBC)</div>
-                <div class="date">2021 – 2023</div>
-                <p>Primary instructor for undergraduate language courses: <strong>Advanced Korean I & II (KORE 301 / 302)</strong>. Led curriculum delivery, assessment design, and student evaluation across multiple academic years.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Guest Lecturer & Mentor (HCI & VR)</h3>
-                <div class="sub">Department of Information Systems, UMBC</div>
-                <div class="date">2018 – 2025</div>
-                <p>Designed and delivered interactive modules and lab activities for graduate courses, including <em>Interface for Information Visualization (HCC 706)</em>, <em>UX of Virtual & Augmented Realities (IS/HCC 698)</em>, <em>Human-Centered Design (HCC 729)</em>, and <em>Advanced Field Research Methods (IS 805)</em>.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>ESL Instructor & Instructional Specialist</h3>
-                <div class="sub">Anne Arundel Community College & English Language Institute (ELI), UMBC</div>
-                <div class="date">2011 – 2016</div>
-                <p>Taught integrated language skills and grammar courses; provided curriculum crosswalk design, instructional technology consulting, and coordinated the ELI Blog community.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Graduate Assistant (Marketing & Analytics)</h3>
-                <div class="sub">Division of Professional Studies, UMBC</div>
-                <div class="date">2006 – 2011, 2016 – 2026</div>
-                <p>Analyzed multi-channel marketing performance, inquiry/enrollment pipelines, email campaign metrics, and managed website updates and digital signage systems.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Overseas Marketing & Trade Manager</h3>
-                <div class="sub">HC Telecom, Hana Bank, LG International Corp.</div>
-                <div class="date">1987 – 2004</div>
-                <p>Led overseas trade operations, international banking credit processes, technical engineering translations, and executive analytics reports.</p>
-            </div>
-        </section>
-
-        <section id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline-item">
-                <h3>Ph.D. in Human-Centered Computing</h3>
-                <div class="sub">University of Maryland, Baltimore County (UMBC) | 2026</div>
-                <p>Dissertation: <em>Understanding Immersion Experience When Using Virtual Reality For Foreign Language Learning</em></p>
-            </div>
-            <div class="timeline-item">
-                <h3>M.S. in Human-Centered Computing</h3>
-                <div class="sub">UMBC | 2014</div>
-            </div>
-            <div class="timeline-item">
-                <h3>M.A. in ISD / ESOL (K-12 Certification)</h3>
-                <div class="sub">UMBC | 2011</div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>I am open to new academic, research, and user experience opportunities.</p>
-            <br>
-            <p>📧 Email: <a href="mailto:hkbae55@gmail.com">hkbae55@gmail.com</a></p>
-            <p>📍 Location: Hanover, MD</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Hye-Kyung Bae. Built with GitHub Pages.</p>
-    </footer>
-
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Main navigation"><div class="nav-inner"><a class="brand" href="#top">Hye-Kyung Bae, Ph.D.</a><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#projects">Selected Work</a></li><li><a href="#experience">Experience</a></li><li><a href="CV_Hye-Kyung%20Bae.pdf">CV</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<main id="main">
+<header class="hero">
+<h1>Hye-Kyung Bae, Ph.D.</h1>
+<p class="subtitle">HCI Researcher and Educator</p>
+<p class="intro">My research explores how people experience and interact with emerging technologies, with a particular interest in immersive virtual environments, and how human-centered computing can support meaningful learning experiences.</p>
+<!-- When the detail pages are ready, change these destinations to research.html and teaching.html. -->
+<div class="buttons"><a class="button primary" href="#research-project">View Research</a><a class="button" href="#teaching-project">View Teaching</a><a class="button" href="CV_Hye-Kyung%20Bae.pdf" download>Download CV</a></div>
+</header>
+<section id="about" aria-labelledby="about-title"><h2 id="about-title">About</h2><div class="about-grid">
+<p>I am an HCI researcher and educator with a Ph.D. in Human-Centered Computing. My research examines how people experience and interact with emerging technologies, particularly virtual reality. My interests include user experience, usability, virtual reality, information visualization, and instructional technology. Through mixed-methods user studies, my dissertation examined students’ experiences of immersion when using virtual reality for foreign language learning.</p>
+<p>My background in instructional systems design and TESOL provides an interdisciplinary foundation for my work, helping me connect human-centered research with the design and evaluation of meaningful, technology-supported immersive experiences.</p>
+</div></section>
+<section id="projects" aria-labelledby="work-title"><h2 id="work-title">Selected Work</h2><div class="cards">
+<article class="card" id="research-project"><img class="project-image" src="IMX_DC_Poster.png" alt="ACM IMX 2021 poster showing an earlier stage of the dissertation research" loading="lazy"><h3>VR Experience for Foreign Language Learning</h3><p>Doctoral research examining immersion, presence, and Korean language learning in fully immersive virtual environments using 360° videos and an interactive virtual simulation.</p><ul class="tags" aria-label="Research topics"><li>Virtual Reality (VR)</li><li>360° Video</li><li>HCI Research</li></ul>
+<!-- Replace this details element with a link to research.html when that page is ready. -->
+<details><summary class="button">View Research</summary><p>A full dissertation overview is coming soon. This poster, presented at ACM IMX 2021, represents an earlier stage of the dissertation research, before Study 2 was conducted.</p><p><a href="IMX_DC_Poster.png">View full IMX poster</a></p></details></article>
+<article class="card" id="teaching-project"><img class="project-image" src="UXPA%20Poster.png" alt="UXPA poster: Exploring New UX Teaching Methods for Virtual Reality" loading="lazy"><h3>Teaching VR Usability Evaluation</h3><p>Designed a three-part, hands-on learning activity and evaluation instruments to teach graduate students how to evaluate VR usability in both a user studies lab and a green-screen studio.</p><ul class="tags" aria-label="Teaching topics"><li>UX Research</li><li>Usability Evaluation</li><li>Instructional Design</li></ul>
+<!-- Replace with a link to teaching.html#vr-usability when that page is ready. -->
+<details><summary class="button">View Teaching Project</summary><p>Further details about this collaborative teaching project are coming soon. The UXPA poster is available below.</p><p><a href="UXPA%20Poster.pdf">View UXPA poster (PDF)</a></p></details></article>
+<article class="card" id="analytics-project">
+<!-- Replace this illustrative SVG with a screenshot of your dashboard when selected. -->
+<svg class="project-image" viewBox="0 0 360 210" role="img" aria-labelledby="analytics-image-title"><title id="analytics-image-title">Illustration of a dashboard, not actual project data</title><rect x="34" y="24" width="292" height="150" rx="8" fill="white" stroke="#c8d2e1"/><rect x="49" y="40" width="90" height="8" rx="4" fill="#bac9df"/><rect x="50" y="65" width="76" height="28" rx="4" fill="#edf1fc"/><rect x="142" y="65" width="76" height="28" rx="4" fill="#edf1fc"/><rect x="234" y="65" width="76" height="28" rx="4" fill="#edf1fc"/><path d="M51 151H176" stroke="#d5ddea"/><rect x="61" y="126" width="18" height="25" fill="#91abd9"/><rect x="89" y="116" width="18" height="35" fill="#7396d1"/><rect x="117" y="124" width="18" height="27" fill="#91abd9"/><rect x="145" y="105" width="18" height="46" fill="#245bc0"/><polyline points="199,145 221,132 243,139 265,114 298,106" stroke="#245bc0" stroke-width="3" fill="none"/><text x="180" y="194" text-anchor="middle" fill="#526177" font-size="11" font-family="sans-serif">Analytics illustration</text></svg>
+<h3>Information Visualization &amp; Analytics</h3><p>Created interactive analytics reports using Google Data Studio, including reports on social media, YouTube, email campaign performance, and enrollment trends, and applied this professional experience to a hands-on information visualization activity in HCC 706.</p><ul class="tags" aria-label="Analytics topics"><li>Information Visualization</li><li>Google Data Studio</li><li>Marketing Analytics</li></ul>
+<!-- Replace with a link to analytics.html when that page is ready. -->
+<details><summary class="button">View Analytics Work</summary><p>Project examples covering marketing analytics, enrollment trends, and classroom applications are coming soon.</p></details></article>
+</div></section>
+<section id="experience" aria-labelledby="experience-title"><h2 id="experience-title">Teaching &amp; Professional Experience</h2><div class="experience-list">
+<article class="job"><div><h3>Guest Lecturer and Teaching Assistant, Human-Centered Computing</h3><p class="meta">Department of Information Systems, UMBC<br>2018–2025</p></div><div class="job-copy"><p>Designed and led mini-lessons and hands-on activities for graduate courses, including <em>Interface for Information Visualization and Retrieval (HCC 706)</em>, <em>User Experience of Virtual and Augmented Realities (IS/HCC 698)</em>, <em>Human-Centered Design (HCC 729)</em>, and <em>Advanced Field Research Methods (IS 805)</em>.</p><p>Topics included information visualization, 360° video content creation, VR immersion, and VR usability evaluation.</p></div></article>
+<article class="job"><div><h3>Language Instructor, Korean and ESL</h3><p class="meta">UMBC · 2021–2023<br>Anne Arundel Community College · 2011–2012</p></div><div class="job-copy"><p>Taught <em>Advanced Korean I and II (KORE 301 and 302)</em> in the Department of Modern Languages, Linguistics, and Intercultural Communication at UMBC.</p><p>Taught <em>ESL Integrated Skills III (EBS 029)</em> and <em>Intermediate Grammar (ESL 311)</em> at Anne Arundel Community College.</p></div></article>
+<article class="job"><div><h3>Instructional Specialist and Graduate Assistant</h3><p class="meta">English Language Institute, UMBC<br>2011–2016</p></div><div class="job-copy"><p>Hosted a three-week training program, assisted instructors and students with Blackboard and instructional design, and led the ELI Blog Club.</p></div></article>
+<article class="job"><div><h3>Graduate Assistant, Marketing and Analytics</h3><p class="meta">Division of Professional Studies, UMBC<br>2006–2011; 2016–2026</p></div><div class="job-copy"><p>Analyzed multichannel marketing performance and inquiry, application, and enrollment trends. Created interactive reports on social media, email campaigns, academic events, and enrollment pipelines, and maintained website content and digital signage.</p></div></article>
+</div></section>
+<section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Contact</h2><p>I welcome opportunities in research, teaching, and interdisciplinary collaboration.</p><div class="contact-links"><a href="mailto:hkbae55@gmail.com">hkbae55@gmail.com</a><a href="https://www.linkedin.com/in/hyekyungbae/">LinkedIn</a><a href="https://github.com/hyekyungbae">GitHub</a><a href="CV_Hye-Kyung%20Bae.pdf" download>Download CV</a></div></section>
+</main><footer>© 2026 Hye-Kyung Bae.</footer>
 </body>
 </html>
